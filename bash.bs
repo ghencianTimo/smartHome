@@ -8,3 +8,13 @@ sudo npm install -g node-gyp
 sudo git clone https://github.com/KhaosT/HAP-NodeJS.git
 cd HAP-NodeJS/
 sudo npm install
+cd ..
+wget abyz.co.uk/rpi/pigpio/pigpio.zip
+unzip pigpio.zip
+cd PIGPIO
+make
+sudo make install
+cd ..
+cd HAP-NodeJS/accessories/
+sudo npm install pigpio
+sudo wget
