@@ -97,7 +97,7 @@ let bluePin = 16;
 var LightController = {
   name: "Smart House RGB",
   pincode: "012-34-567",
-  username: "EA:3C:ED:5A:1A:1A",
+  username: "EM:3C:ED:5A:1A:1A",
   manufacturer: "Timo",
   model: "v1.0",
   serialNumber: "A12S345KGB",
