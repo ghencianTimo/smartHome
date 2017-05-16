@@ -1,0 +1,3 @@
+sudo forever stopall
+cd /home/pi/HAP-NodeJS
+sudo forever start Core.js
