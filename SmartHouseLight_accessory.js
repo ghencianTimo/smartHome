@@ -9,9 +9,9 @@ var statusLED = 1;
 var hueLED = 0;
 var saturationLED = 0;
 var RGB = [];
-let redPin = 21;
-let greenPin = 20;
-let bluePin = 16;
+var redPin = 21;
+var greenPin = 20;
+var bluePin = 16;
 
   function float2int(value) {
       return value | 0;
