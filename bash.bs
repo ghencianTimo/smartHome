@@ -17,6 +17,6 @@ sudo make install
 cd ..
 cd HAP-NodeJS/accessories/
 sudo npm install pigpio
-sudo wget
-https://raw.githubusercontent.com/ghencianTimo/smartHome/master/SmartHouseLight.js
-cd ..
+sudo wget https://raw.githubusercontent.com/ghencianTimo/smartHome/master/SmartHouseLight.js
+cd ~
+sudo npm install forever -g
