@@ -9,9 +9,7 @@ var statusLED = 1;
 var hueLED = 0;
 var saturationLED = 0;
 var RGB = [];
-var redPin = 21;
-var greenPin = 20;
-var bluePin = 16;
+
 
   function float2int(value) {
       return value | 0;
@@ -116,13 +114,13 @@ var LightController = {
     RGB = hsvToRgb(hueLED, saturationLED, brightnessLED);
     if(this.outputLogs) console.log(this.name, "este:", status ? "aprins" : "stins");
     if(statusLED){
-      Gpio(redPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
-      Gpio(greenPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
-      Gpio(bluePin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
+      Gpio(21, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
+      Gpio(20, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
+      Gpio(16, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
   }    else{
-    Gpio(redPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(greenPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(bluePin, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(21, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(20, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(16, {mode: Gpio.OUTPUT}).digitalWrite(0);
 
   }
     this.power = status;
@@ -138,13 +136,13 @@ var LightController = {
     RGB = hsvToRgb(hueLED, saturationLED, brightnessLED);
     if(this.outputLogs) console.log("Intensitatea este:", this.brightness, "%");
     if(statusLED){
-      Gpio(redPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
-      Gpio(greenPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
-      Gpio(bluePin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
+      Gpio(21, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
+      Gpio(20, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
+      Gpio(16, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
   }    else{
-    Gpio(redPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(greenPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(bluePin, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(21, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(20, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(16, {mode: Gpio.OUTPUT}).digitalWrite(0);
 
   }
     this.brightness = brightness;
@@ -161,13 +159,13 @@ var LightController = {
     RGB = hsvToRgb(hueLED, saturationLED, brightnessLED);
     if(this.outputLogs) console.log("Saturatia este:", this.saturation);
     if(statusLED){
-      Gpio(redPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
-      Gpio(greenPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
-      Gpio(bluePin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
+      Gpio(21, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
+      Gpio(20, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
+      Gpio(16, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
   }    else{
-    Gpio(redPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(greenPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(bluePin, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(21, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(20, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(16, {mode: Gpio.OUTPUT}).digitalWrite(0);
 
   }
     this.saturation = saturation;
@@ -183,13 +181,13 @@ var LightController = {
     RGB = hsvToRgb(hueLED, saturationLED, brightnessLED);
     if(this.outputLogs) console.log("Hue este:", this.hue);
     if(statusLED){
-      Gpio(redPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
-      Gpio(greenPin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
-      Gpio(bluePin, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
+      Gpio(21, {mode: Gpio.OUTPUT}).pwmWrite(RGB[0]);
+      Gpio(20, {mode: Gpio.OUTPUT}).pwmWrite(RGB[1]);
+      Gpio(16, {mode: Gpio.OUTPUT}).pwmWrite(RGB[2]);
   }    else{
-    Gpio(redPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(greenPin, {mode: Gpio.OUTPUT}).digitalWrite(0);
-    Gpio(bluePin, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(21, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(20, {mode: Gpio.OUTPUT}).digitalWrite(0);
+    Gpio(16, {mode: Gpio.OUTPUT}).digitalWrite(0);
 
   }
     this.hue = hue;
